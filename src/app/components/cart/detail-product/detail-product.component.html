@@ -1,0 +1,56 @@
+<app-header-user></app-header-user>
+
+<!-- Incluye los estilos de Materialize -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Breadcrumbs -->
+    <nav>
+        <div class="nav-wrapper">
+            <div class="col s12">
+                <a href="index.html" class="breadcrumb">Home</a>
+                <a class="breadcrumb">Producto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post -->
+    <div class="card">
+        <div class="card-content">
+            <div class="row">
+                <div class="col s12 m6">
+                    <a href="#">
+                        <img class="responsive-img materialboxed product-image" src="{{urlImage}}" alt="Producto">
+                    </a>
+                </div>
+                <div class="col s12 m6">
+                    <form action="#" method="POST">
+                        <h5 class="card-title">{{name}}</h5>
+
+                        <ul class="collection">
+                            <li class="collection-item"><strong>Precio:  {{price}}</strong></li>
+                            <li class="collection-item"><p>Descripción:  {{description}}</p></li>
+                            <li class="collection-item">
+                                <strong>Cantidad:</strong>
+                                <input type="number" [(ngModel)]="quantity" id="quantity" name="quantity" class="validate" min="1" max="5" value="1">
+                            </li>
+                        </ul>
+
+                        <button (click)="addCart(id)" type="submit" class="btn waves-effect waves-light">Añadir al carrito</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+
+<!-- Incluye los scripts de Materialize -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        M.AutoInit(); // Inicializa todos los componentes de Materialize
+    });
+</script>
+

@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    height: 100px;
+}
+
+header nav {
+    height: 100px;
+    background-color: white;
+    box-shadow: gray;
+}
+
+nav .brand-logo {
+    height: 100%;
+}
+
+nav .brand-logo img {
+    width: 52px;
+    height: auto;
+}
+
+header nav ul {
+    height: 100px;
+}
+
+header ul a {
+    color: #26a69a;
+}
+
+.header-main-pic {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: none;
+}
+
+nav .input-field {
+    margin: 0;
+    padding: 0;
+    height: 34px;
+}
+
+nav .input-field input {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    border: gray;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+}
+
+nav .input-field label {
+    margin-top: -5px;
+    margin-right: 10px;
+    color: #26a69a;
+}
+
+.input-field.input-container {
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.input-field > #search {
+    margin-top: 25px;
+}
+
+.input-container i {
+    margin-top: 45px;
+    margin-right: 15px;
+}
+
+.slider {
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.slider .slides {
+    width: 100%;
+}
+
+.slider .slides img {
+    width: 100%;
+    height: auto;
+}
+
+.slider .caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer.page-footer {
+    height: 150px;
+    background: #26a69a;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .slider {
+        height: 300px;
+    }
+    
+    .card {
+        margin: 5px;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-content, .card-reveal {
+        padding: 8px;
+    }
+}
+
+.responsive-table {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+
+    .action-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

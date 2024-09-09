@@ -1,0 +1,72 @@
+   <app-header-user></app-header-user>
+   
+    <main class="container">     
+
+        <section>
+            <div class="carousel carousel-slider center">
+                <div class="carousel-item" href="#one!">
+                    <!-- <img src="/src/assets/img/crema_nutritiva.jpg" alt="Slide 1" class="responsive-img"> -->
+                    <div class="carousel-caption">
+                        <h5>Producto Estrella</h5>
+                        <p>Descripción del producto estrella.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" href="#two!">
+                    <!-- <img src="/src/assets/img/locion.jpg" alt="Slide 2" class="responsive-img"> -->
+                    <div class="carousel-caption">
+                        <h5>Novedades</h5>
+                        <p>Descubre las últimas novedades en nuestro catálogo.</p>
+                    </div>
+                </div>
+                <!-- <div class="carousel-item" href="#three!">
+                    <img src="assets/images/slide3.jpg" alt="Slide 3" class="responsive-img">
+                    <div class="carousel-caption">
+                        <h5>Promociones</h5>
+                        <p>No te pierdas nuestras ofertas especiales.</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        
+        <section>
+            <div class="row">
+                <!-- Usamos *ngFor para renderizar las cards -->
+                <article class="col s12 m6 l4" *ngFor="let product of products">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator responsive-img" [src]="product.urlImage" [alt]="'Imagen de ' + product.name">
+                        </div>                        
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">{{product.name}} <i class="material-icons right">more_vert</i></span>
+                            <p>Precio: {{product.price | currency:'COP ':'symbol':'1.0-0'}}</p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">{{product.name}} <i class="material-icons right">close</i></span>
+                            <p>{{product.description}}</p>
+                            <a class="waves-effect waves-teal btn-flat teal lighten-5 right" [routerLink]="['/cart/detailproduct', + product.id]">Ir</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">C Natural</h5>
+                    <p class="grey-text text-lighten-4">Empresa de productos homeopáticos para el cuidado de la piel.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Enlaces</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="aboutUs.html">Sobre nosotros</a></li>
+                        <li><a class="grey-text text-lighten-3" href="contact.html">Contacto</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
+

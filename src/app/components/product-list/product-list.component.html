@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lista de productos para el e-commerce">
+    <meta name="keywords" content="productos, e-commerce, lista de productos">
+    <meta name="author" content="Tu Nombre">
+    <title>Lista de Productos</title>
+    <!-- Import Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Include the project's CSS -->
+    <link rel="stylesheet" href="product-list.component.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Page Heading -->
+        <div class="section">
+            <app-header-user></app-header-user> <!-- Encabezado personalizado -->
+        
+            <div class="breadcrumb">
+                <a href="#" class="breadcrumb">Home</a>
+                <a href="#" class="breadcrumb">Ver Productos</a>
+            </div>
+        
+            <a class="btn waves-effect waves-light teal lighten-1" routerLink="/admin/products/add">Crear Producto</a>
+        </div>
+
+        <h2 class="section">Productos</h2>
+
+        <table class="striped highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>                    
+                    <th>Descripción</th>                    
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of products">
+                    <td>{{p.code}}</td>
+                    <td><img class="activator responsive-img" [src]="p.urlImage" alt="image" style="max-width: 100px; height: auto;"></td>
+                    <td>{{p.name}}</td>
+                    
+                    <td>{{p.description}}</td>
+                    <td>{{p.price}}</td>
+                    <td>
+                        <a class="btn-floating btn-small waves-effect waves-light orange" [routerLink] ="['/admin/products/edit', p.id]" ><i class="material-icons">edit </i></a>
+                        <a class="btn-floating btn-small waves-effect waves-light red" (click)="deleteProductById(p.id)"> <i class="material-icons">delete</i></a>
+                    </td>
+                </tr>
+                <!-- Más filas de productos aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            M.AutoInit(); // Inicializa todos los componentes de Materialize
+        });
+    </script>
+</body>
+</html>
+
