@@ -1,0 +1,40 @@
+/* Estilo personalizado para el formulario y el modal */
+.container {
+    margin-top: 5rem;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  .card-title {
+    font-size: 2.2rem;
+    color: #00796b; /* Color principal */
+    font-weight: 600;
+  }
+  
+  .input-field .prefix {
+    color: #00796b;
+  }
+  
+  .btn-large {
+    background-color: #00796b;
+    color: white;
+    padding: 0 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .btn-large:hover {
+    background-color: #004d40;
+  }
+  
+  .modal {
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .modal-footer a {
+    color: #00796b;
+  }
+  

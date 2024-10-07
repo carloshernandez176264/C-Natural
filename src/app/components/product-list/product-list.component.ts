@@ -29,35 +29,40 @@ export class ProductListComponent implements OnInit {
     );
   }  
 
-  deleteProductById(id:number){
-
+  deleteProductById(id: number) {
     Swal.fire({
-      title: 'Estas seguro de eliminar el producto?',
-      text: "No podras revertir esta acción!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Si, eliminarlo!'
+        title: 'Estas seguro de eliminar el producto?',
+        text: "No podras revertir esta acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminarlo!'
     }).then((result) => {
-      if(result.isConfirmed){
-        Swal.fire(
-          'Borrar',
-          'El producto ha sido eliminado',
-          'success'
-        )
-      }
-    })
-
-    this.productService.deleteProductById(id).subscribe(
-      data => {
-        console.log('Product deleted');        
-        this.listProducts();
-      }
-    );
-  }
-
-
+        if (result.isConfirmed) {
+            // Mueve la llamada al servicio dentro del bloque if
+            this.productService.deleteProductById(id).subscribe(
+                data => {
+                    console.log('Product deleted');
+                    this.listProducts();
+                    Swal.fire(
+                        'Borrar',
+                        'El producto ha sido eliminado',
+                        'success'
+                    );
+                },
+                error => {
+                    console.error('Error deleting product:', error);
+                    Swal.fire(
+                        'Error',
+                        'Hubo un problema eliminando el producto.',
+                        'error'
+                    );
+                }
+            );
+        }
+    });
+}
   
 
 }

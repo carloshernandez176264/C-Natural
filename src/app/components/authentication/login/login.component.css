@@ -1,0 +1,109 @@
+/* Estilo personalizado para el formulario de inicio de sesión */
+.container {
+    margin-top: 5rem;
+  }
+  
+  .card {
+    border-radius: 12px;
+  }
+  
+  .card-title {
+    font-size: 2.2rem;
+    color: #00796b; /* Color principal */
+    font-weight: 600;
+  }
+  
+  .input-field .prefix {
+    color: #00796b;
+  }
+  
+  .btn-large {
+    background-color: #00796b;
+    color: white;
+    padding: 0 2rem;
+    border-radius: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .btn-large:hover {
+    background-color: #004d40;
+  }
+  
+  .card-action a {
+    color: #00796b;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  
+  .card-action a:hover {
+    color: #004d40;
+    text-decoration: underline;
+  }
+  
+ /* Personalización del modal */
+.modal {
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content {
+    padding: 20px;
+    max-height: 80vh; /* Limitar la altura máxima */
+    overflow-y: auto; /* Permitir desplazamiento solo en el contenido */
+  }
+  
+  .modal-content h4 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .modal-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #616161;
+  }
+  
+  .input-field input[type="text"], 
+  .input-field input[type="email"],
+  .input-field input[type="password"] {
+    border-bottom: 2px solid #00796b;
+    box-shadow: none;
+  }
+  
+  .input-field input:focus {
+    border-bottom: 2px solid #004d40;
+    box-shadow: none;
+  }
+  
+  .input-field label {
+    color: #004d40;
+    font-weight: 500;
+  }
+  
+  .input-field .helper-text {
+    font-size: 0.9rem;
+  }
+  
+  .modal-footer {
+    padding: 10px 20px;
+    border-top: 1px solid #eeeeee;
+  }
+  
+  .modal-footer .btn {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+  }
+  
+  .modal-footer .btn-flat {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  
+  .modal-footer .btn:hover {
+    background-color: #004d40 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  

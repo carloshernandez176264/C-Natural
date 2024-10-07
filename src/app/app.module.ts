@@ -22,6 +22,8 @@ import { CategoryAddComponent } from './components/category/category-add/categor
 import { DetailProductComponent } from './components/cart/detail-product/detail-product.component';
 import { HeaderUserComponent } from './components/header-user/header-user.component';
 import { SumaryOrderComponent } from './components/orders/sumary-order/sumary-order.component';
+import { LoginComponent } from './components/authentication/login/login.component';
+import { RegistrationComponent } from './components/authentication/registration/registration.component';
 
 
 const routes : Routes = [
@@ -48,6 +50,8 @@ const routes : Routes = [
     DetailProductComponent,
     HeaderUserComponent,
     SumaryOrderComponent,
+    LoginComponent,
+    RegistrationComponent,
     
   ],
   imports: [

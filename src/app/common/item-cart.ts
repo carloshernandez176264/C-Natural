@@ -7,7 +7,7 @@ export class ItemCart {
         public price:number
     ){}
 
-    getTotalPriceItem(){
+    getTotalPriceItem():number{
         return this.quantity * this.price
     }
 }

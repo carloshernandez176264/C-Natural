@@ -59,12 +59,7 @@ export class DetailProductComponent implements OnInit {
       showConfirmButton: false,
       timer: 1800
     });
-
-
-
-
-    this.router.navigate(['/cart']);
-    
+    this.router.navigate(['/cart']);    
   }
 
 }

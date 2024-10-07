@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/common/product';
+import { HomeService } from 'src/app/services/home.service';
 import { ProductService } from 'src/app/services/product.service';
 
 declare const M :any;
@@ -15,11 +16,11 @@ export class HomeComponent implements OnInit{
   
 
   constructor(
-    private productService: ProductService,
+    private homeService: HomeService,
   ){}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe(
+    this.homeService.getProducts().subscribe(
       data => this.products = data
     )
   }

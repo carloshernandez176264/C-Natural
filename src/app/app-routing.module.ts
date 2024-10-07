@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { CategoryListComponent } from './components/category/category-list/category-list.component';
 import { CategoryAddComponent } from './components/category/category-add/category-add.component';
 import { DetailProductComponent } from './components/cart/detail-product/detail-product.component';
+import { SumaryOrderComponent } from './components/orders/sumary-order/sumary-order.component';
+import { LoginComponent } from './components/authentication/login/login.component';
+import { RegistrationComponent } from './components/authentication/registration/registration.component';
 
 
 const routes: Routes = [
@@ -32,6 +35,15 @@ const routes: Routes = [
   },
   {
     path: 'cart/detailproduct/:id', component: DetailProductComponent
+  },
+  {
+    path:'cart/sumary', component:SumaryOrderComponent
+  },
+  {
+    path : 'user/register', component:RegistrationComponent
+  },
+  {
+    path: "user/login",  component:LoginComponent
   },
 
 

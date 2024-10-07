@@ -4,65 +4,57 @@
 <!-- Page Content -->
 <div class="container">
 
-  <!-- Page Heading/Breadcrumbs -->
-  <h1 class="mt-4 mb-3">
-    Spring eCommerce <small>Resumen de la orden</small>
-  </h1>
-
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
-    <li class="breadcrumb-item active">Orden</li>
-  </ol>
+  <!-- Breadcrumb -->
+  <nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <a [routerLink]="['/']" class="breadcrumb">Home</a>
+        <span class="breadcrumb">Orden</span>
+      </div>
+    </div>
+  </nav>
 
   <!-- Blog Post -->
-  <div class="card mb-4">
-    <div class="card-body">
+  <div class="card">
+    <div class="card-content">
       <div class="row">
-        <div class="col-lg-9">
-          <div class="card-body">
-            <h5 class="card-title">
-              DATOS ORDEN
-            </h5>
-            <h6><strong> Nombre: </strong> </h6>
-            <h6><strong>Correo: </strong>  </h6>
-            <h6><strong> Dirección: </strong></h6>
+        <div class="col s12 m9">
+          <h5 class="card-title">DATOS ORDEN</h5>
+          <p><strong>Nombre:</strong></p>
+          <p><strong>Correo:</strong></p>
+          <p><strong>Dirección:</strong></p>
 
-            <h5 class="card-title">
-              PRODUCTOS
-            </h5>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Total</th>
-                    <th>Eliminar</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><button class="btn btn-danger">Quitar</button> </td>
-                  </tr>
-                </tbody>
-              </table>
-          </div>
+          <h5 class="card-title">PRODUCTOS</h5>
+          <table class="striped">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of items">
+                <td>{{i.productName}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.quantity}}</td>
+                <td>{{i.getTotalPriceItem()}}</td>
+                <td><button class="btn red">Quitar</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-
-        <div class="col-lg-3">
-          <h2 class="card-title">Resumen Orden</h2>
-
-          <ul class="list-group">
-            <li class="list-group-item">
-              <h5> Total: </h5>
+        <div class="col s12 m3">
+          <h5 class="card-title">Resumen Orden</h5>
+          <ul class="collection">
+            <li class="collection-item">
+              <h6>Total:</h6>
             </li>
-            <a class="btn btn-dark">Pagar con Paypal</a>
           </ul>
+          <a class="waves-effect waves-light btn">Pagar con Paypal</a>
         </div>
       </div>
     </div>
